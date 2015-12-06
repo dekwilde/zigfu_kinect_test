@@ -25,17 +25,35 @@ div.user {
 	background-color: blue;
     }
      
-#mycursor.pushed {
-	background-color: red;
+#mycursor.steady {
+	background-color: violet;
 }
 
 /* CONTENT */
 
-div#link {
-	width: 200px;
-	height: 200px;
+div#bubble1 {
+	width: 100px;
+	height: 100px;
 	background-color: green;
 	margin-left: auto;
-	margin-right: auto;
-	margin-top:0px;
+	margin-right: 20px;
+	margin-top: 40px;
+}
+
+div#bubble2 {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	margin-left: auto;
+	margin-right: 20px;
+	margin-top: 40px;
+}
+
+div#bubble3 {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	margin-left: auto;
+	margin-right: 20px;
+	margin-top: 40px;
 }
