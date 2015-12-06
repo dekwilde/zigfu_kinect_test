@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Zig Plugin Test</title>
- 
+<title>Zigfu Kinect Test</title>
+
+<link href="./css/style.css" type="text/css" rel="stylesheet">
+
 <script src='http://cdn.zigfu.com/zigjs/zig.min.js'></script>
  
 <script>
@@ -88,48 +90,6 @@ zig.singleUserSession.addListener(steadyDetector);
  
 </head>
 <body>
-<style>
-    div#radar 
-    {
-        width: 300px;
-        height: 300px;
-        border: 1px solid black;
-        overflow: hidden;
-	position: fixed;
-	bottom: 0px;
-        margin-left: 390px; /* centered at res = 1080px */
-    }
-
-    div.user 
-    {
-        position: relative;
-        width: 30px;
-        height: 30px;
-        background-color: blue;
-    }
-
-    #mycursor {
-    	position: fixed;
-    	display : none;
-    	width : 40px;
-    	height : 40px;
-    	background-color : blue;
-    }
-     
-    #mycursor.pushed {
-    	background-color: red;
-    }
-
-    div#link
-    {
-        width: 200px;
-	height: 200px;
-	background-color: green;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top:-100px;
-     }
-</style>
 
 <div id="radar"></div>
 
