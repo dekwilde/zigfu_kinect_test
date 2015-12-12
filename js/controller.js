@@ -81,11 +81,13 @@ function loaded()
 				{
 				console.log('Success');
 				};
-			var tester = document.createElement('div');
+			/*var tester = document.createElement('div');
 			var testerstyle = 'margin-left: ' + xpos + 'px; margin-top: ' + ypos + 'px; width: 10px; height: 10px; background-color: red; z-index: 99;';
 			tester.style.cssText = testerstyle;
-			document.body.appendChild(tester);
+			document.body.appendChild(tester);*/
             console.log('SteadyDetector: Steady');
+			console.log('Xpos: ' + xpos + ' and ypos: ' + ypos + '')
+			/*eventFire(document.getElementById('bubble1'), 'click');*/
             }, 3000);
         });
 
@@ -101,5 +103,19 @@ function loaded()
 	zig.addListener(radar);
     
     };
+	
+	function eventFire(el, etype)
+		{
+		if (el.fireEvent)
+			{
+			el.fireEvent('on' + etype);
+			}
+		else
+			{
+			var evObj = document.createEvent('Events');
+			evObj.initEvent(etype, true, false);
+			el.dispatchEvent(evObj);
+			}
+		}
 
 	document.addEventListener('DOMContentLoaded', loaded, false);
