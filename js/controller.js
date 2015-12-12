@@ -1,7 +1,7 @@
 function loaded() 
 	{
         
-    // RADAR, that shows the user position
+    // position feedback plane & user in it
 	var radardiv = document.getElementById('radar');
     
    	var radar = 
@@ -38,16 +38,14 @@ function loaded()
 				}
             }
 		}
-
-    // CURSOR
     
-    // Create cursor and cursor dom element
+    // create cursor and cursor dom element
     var c = zig.controls.Cursor();
     var ce = document.createElement('div');
     ce.id = 'mycursor';
     document.body.appendChild(ce);
      
-    // 1. show/hide cursor on session start/end
+    // show/hide cursor on session start/end
     zig.singleUserSession.addEventListener('sessionstart', function(focusPosition)
         {
         ce.style.display = 'block';
@@ -58,14 +56,14 @@ function loaded()
         ce.style.display = 'none';
         });
      
-    // 2. move the cursor element on cursor move
+    // move the cursor element on cursor move
     c.addEventListener('move', function(cursor)
         {
         ce.style.left = (c.x * window.innerWidth - (ce.offsetWidth / 2)) + "px";
         ce.style.top = (c.y * window.innerHeight - (ce.offsetHeight / 2)) + "px";
         });
 
-    // STEADY DETECTOR for cursor
+    // steady detector
     var steadyDetector = zig.controls.SteadyDetector();
     
     steadyDetector.addEventListener('steady', function(sd)
@@ -75,19 +73,31 @@ function loaded()
             ce.classList.add('steady');
             var xpos = c.x * window.innerWidth;
 			var ypos = c.y * window.innerHeight;
-			var evt = document.createEvent("MouseEvents");
-			evt.initMouseEvent("click", true, true, window, 1, xpos, ypos, xpos, ypos, false, false, false, false, 0, null);
-			if (window.dispatchEvent(evt))
+
+			// click button 1
+			if (xpos > 840 && xpos < 1040 && ypos > 40 && ypos < 240)
 				{
-				console.log('Success');
-				};
-			/*var tester = document.createElement('div');
-			var testerstyle = 'margin-left: ' + xpos + 'px; margin-top: ' + ypos + 'px; width: 10px; height: 10px; background-color: red; z-index: 99;';
-			tester.style.cssText = testerstyle;
-			document.body.appendChild(tester);*/
-            console.log('SteadyDetector: Steady');
-			console.log('Xpos: ' + xpos + ' and ypos: ' + ypos + '')
-			/*eventFire(document.getElementById('bubble1'), 'click');*/
+                eventFire(document.getElementById('bubble1'), 'click');
+				}
+				
+			// click button 2
+			if (xpos > 840 && xpos < 1040 && ypos > 280 && ypos < 480)
+				{
+                eventFire(document.getElementById('bubble2'), 'click');
+				}
+				
+			// click button 3
+			if (xpos > 840 && xpos < 1040 && ypos > 520 && ypos < 720)
+				{
+                eventFire(document.getElementById('bubble3'), 'click');
+				}
+			
+			// click close button
+			if (xpos > 40 && xpos < 140 && ypos > 40 && ypos < 140)
+				{
+                eventFire(document.getElementById('close'), 'click');
+				}
+				
             }, 3000);
         });
 
@@ -97,13 +107,14 @@ function loaded()
         ce.classList.remove('steady');
         });
     
-    // Event listeners
+    // Event listeners for zigfu
     zig.singleUserSession.addListener(steadyDetector);
  	zig.singleUserSession.addListener(c);
 	zig.addListener(radar);
     
     };
 	
+	// Function, that fires a click event upon the element it gets fed with
 	function eventFire(el, etype)
 		{
 		if (el.fireEvent)
