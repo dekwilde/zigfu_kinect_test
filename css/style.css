@@ -1,3 +1,7 @@
+body {
+    overflow:hidden;
+}
+
 /* CONTROLS */
 
 div#radar {
@@ -8,7 +12,8 @@ div#radar {
 	position: fixed;
 	bottom: 0px;
 	margin-left: 340px; /* centered at res = 1080px */
-	margin-bottom: 40px; 
+	margin-bottom: 40px;
+	z-index: 11;
 }
 
 div.user {
@@ -24,13 +29,14 @@ div.user {
 	width: 40px;
 	height: 40px;
 	background-color: blue;
+	z-index: 98;
     }
      
 #mycursor.steady {
 	background-color: violet;
 }
 
-/* CONTENT */
+/* CONTENT BUBBLES */
 
 div#bubble1 {
 	width: 200px;
@@ -39,6 +45,7 @@ div#bubble1 {
 	margin-left: auto;
 	margin-right: 40px;
 	margin-top: 40px;
+	background-image: url(../gfx/alpha-button.png);
 }
 
 div#bubble2 {
@@ -48,6 +55,7 @@ div#bubble2 {
 	margin-left: auto;
 	margin-right: 40px;
 	margin-top: 40px;
+	background-image: url(../gfx/content-button.png);
 }
 
 div#bubble3 {
@@ -57,6 +65,17 @@ div#bubble3 {
 	margin-left: auto;
 	margin-right: 40px;
 	margin-top: 40px;
+	background-image: url(../gfx/4k-button.png);
+}
+
+div#bubble4 {
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	margin-left: auto;
+	margin-right: 40px;
+	margin-top: 40px;
+	background-image: url(../gfx/eplus-button.png);
 }
 
 div#close {
@@ -66,4 +85,17 @@ div#close {
 	margin-left: 40px;
 	margin-right: auto;
 	margin-top: 40px;
+	z-index: 99;
+	position: absolute;
+	background-image: url(../gfx/close-button.png);	
 }
+
+/* 4K VIDEO TEST */
+
+video { 
+	position:absolute;
+	top:0;
+	left:0;
+	z-index: 1;
+}
+
