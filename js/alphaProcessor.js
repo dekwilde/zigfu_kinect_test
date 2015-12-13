@@ -1,3 +1,8 @@
+/*
+ Ideas for optimization:
+ - render video only once, then store the processed frames and replay video from storage when looping
+ - "buffer" video before starting to play in order to compensate for lags
+ */
 function processVideo()
     {
     var outputCanvas = document.getElementById('output'),
@@ -34,3 +39,4 @@ function processVideo()
     };
 
 document.addEventListener('DOMContentLoaded', processVideo, false);
+
