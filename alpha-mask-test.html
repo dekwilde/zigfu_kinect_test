@@ -4,8 +4,10 @@
 <title>Zigfu Kinect Test</title>
 
 <script src='http://cdn.zigfu.com/zigjs/zig.min.js'></script>
-<script src="./js/controller.js"></script>
-<script src="./js/transparency-processor.js"></script>
+<script src="./js/kinectController.js"></script>
+<script src="./js/clickEventDefinitions.js"></script>
+<script src="./js/clickEventFire.js"></script>
+<script src="./js/alphaProcessor.js"></script>
 
 <link href="./css/style.css" type="text/css" rel="stylesheet">
  
@@ -19,9 +21,9 @@
 </video>
 
 <canvas width="2048" height="1434" id="buffer" style="display: none;"></canvas>
-<canvas width="1024" height="1434" id="output" style="top:" ></canvas>
+<canvas width="1024" height="1434" id="output" style="position: absolute; z-index: 30;"></canvas>
 
-<img src="./gfx/hangar-bg.jpg" border="0" style="top: 0; left: 0; position: absolute;" />
+<img src="./gfx/hangar-bg.jpg" border="0" style="top: 0; left: 0; position: absolute; z-index:29;" />
 
 </body>
 </html>
