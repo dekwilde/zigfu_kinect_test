@@ -92,6 +92,12 @@ function loaded()
                 eventFire(document.getElementById('bubble3'), 'click');
 				}
 			
+			// click button 4
+			if (xpos > 840 && xpos < 1040 && ypos > 760 && ypos < 960)
+				{
+                eventFire(document.getElementById('bubble4'), 'click');
+				}
+			
 			// click close button
 			if (xpos > 40 && xpos < 140 && ypos > 40 && ypos < 140)
 				{
