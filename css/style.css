@@ -14,7 +14,7 @@ div#radar {
 	bottom: 0px;
 	margin-left: 340px; /* centered at res = 1080px */
 	margin-bottom: 40px;
-    z-index: 3;
+    z-index: 90;
 }
 
 div.user {
@@ -22,7 +22,7 @@ div.user {
 	width: 30px;
 	height: 30px;
 	background-color:#779E27;
-    z-index: 2;
+    z-index: 89;
 }
 
 #mycursor {
@@ -31,7 +31,7 @@ div.user {
 	width: 40px;
 	height: 40px;
 	background-color: blue;
-    z-index: 1;
+    z-index: 97;
     }
      
 #mycursor.steady {
@@ -47,7 +47,7 @@ div#bubble1 {
 	margin-left: auto;
 	margin-right: 40px;
 	margin-top: 40px;
-    z-index: 30;
+    z-index: 60;
 }
 
 div#bubble2 {
@@ -57,7 +57,7 @@ div#bubble2 {
 	margin-left: auto;
 	margin-right: 40px;
 	margin-top: 40px;
-    z-index: 30;
+    z-index: 60;
 }
 
 div#bubble3 {
@@ -67,7 +67,7 @@ div#bubble3 {
 	margin-left: auto;
 	margin-right: 40px;
 	margin-top: 40px;
-    z-index: 30;
+    z-index: 60;
 }
 
 div#bubble4 {
@@ -77,7 +77,7 @@ div#bubble4 {
 	margin-left: auto;
 	margin-right: 40px;
 	margin-top: 40px;
-    z-index: 30;
+    z-index: 60;
 }
 
 div#close {
@@ -87,16 +87,24 @@ div#close {
 	margin-left: 40px;
 	margin-right: auto;
 	margin-top: 40px;
-    z-index: 30;
+    z-index: 60;
     position: absolute;
 }
 
 /* VIDEO */
 
-video {
+video.colortest {
     top: 0;
-    left: -900px;
-    background-size: cover;
+    left: -1600px;
+    height: 1920px;
     position: absolute;
-    z-index: 60;
+    z-index: 30;
+}
+
+video.alpha {
+    top: 0;
+    left: -1500px;
+    height: 1920px;
+    position: absolute;
+    z-index: 30;
 }
