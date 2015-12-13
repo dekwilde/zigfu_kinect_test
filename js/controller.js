@@ -135,4 +135,4 @@ function loaded()
 			}
 		}
 
-	document.addEventListener('DOMContentLoaded', loaded, false);
+document.addEventListener('DOMContentLoaded', loaded, false);

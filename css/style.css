@@ -100,11 +100,3 @@ video.colortest {
     position: absolute;
     z-index: 30;
 }
-
-video.alpha {
-    top: 0;
-    left: -1500px;
-    height: 1920px;
-    position: absolute;
-    z-index: 30;
-}
