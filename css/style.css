@@ -5,15 +5,16 @@ body {
 /* CONTROLS */
 
 div#radar {
-	width: 400px;
-	height: 400px;
+	width: 33%;
+	height: 20%;
 	border: dashed black 5px;
     background-color: #FFF;
 	overflow: hidden;
 	position: fixed;
 	bottom: 0px;
-	margin-left: 340px; /* centered at res = 1080px */
-	margin-bottom: 40px;
+	margin-left: 33%; /* centered at res = 1080px */
+	margin-right: 33%;
+    margin-bottom: 40px;
     z-index: 90;
 }
 
@@ -96,7 +97,7 @@ div#close {
 video.colortest {
     top: 0;
     left: -1600px;
-    height: 1920px;
+    height: 100%;
     position: absolute;
     z-index: 30;
 }
