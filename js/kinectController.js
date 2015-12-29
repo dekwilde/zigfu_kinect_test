@@ -74,36 +74,29 @@ function kinectController()
             var xpos = c.x * window.innerWidth;
 			var ypos = c.y * window.innerHeight;
 			
-			// determine if FHD or UHD
-			if (window.innerWidth > 1080)
-				{
-                var uhd = 2;
-				}
-			else
-				{
-				var uhd = 1;
-				}
+			var marginright = 40;
+			var size = 200;
 
 			// click button 1
-			if (xpos > (840 * uhd) && xpos < (840 * uhd + 200) && ypos > 40 && ypos < 240)
+			if (xpos > (window.innerWidth - marginright - size) && xpos < (window.innerWidth - marginright) && ypos > 40 && ypos < 240)
 				{
                 eventFire(document.getElementById('bubble1'), 'click');
 				}
 				
 			// click button 2
-			if (xpos > (840 * uhd) && xpos < (840 * uhd + 200) && ypos > 280 && ypos < 480)
+			if (xpos > (window.innerWidth - marginright - size) && xpos < (window.innerWidth - marginright) && ypos > 280 && ypos < 480)
 				{
                 eventFire(document.getElementById('bubble2'), 'click');
 				}
 				
 			// click button 3
-			if (xpos > (840 * uhd) && xpos < (840 * uhd + 200) && ypos > 520 && ypos < 720)
+			if (xpos > (window.innerWidth - marginright - size) && xpos < (window.innerWidth - marginright) && ypos > 520 && ypos < 720)
 				{
                 eventFire(document.getElementById('bubble3'), 'click');
 				}
 			
 			// click button 4
-			if (xpos > (840 * uhd) && xpos < (840 * uhd + 200) && ypos > 760 && ypos < 960)
+			if (xpos > (window.innerWidth - marginright - size) && xpos < (window.innerWidth - marginright) && ypos > 760 && ypos < 960)
 				{
                 eventFire(document.getElementById('bubble4'), 'click');
 				}
@@ -129,5 +122,5 @@ function kinectController()
 	zig.addListener(radar);
     
     };
-	
+
 document.addEventListener('DOMContentLoaded', kinectController, false);

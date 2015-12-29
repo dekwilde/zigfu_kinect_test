@@ -97,8 +97,8 @@ div#close {
 
 video.colortest {
     top: 0;
-    left: -1600px;
+    /*left: -1600px;*/
     height: 100%;
     position: absolute;
     z-index: 30;
-}
+} 
