@@ -14,13 +14,41 @@
 
 <div id="radar"></div>
 
-<div id="bubble1" onclick="location.href='./alpha-mask-test.html'"></div>
+<div class="background warning" style="position: fixed; z-index: -100">
+    <h3 style="color: red;">Please read carefully before proceeding with demo.</h3>
+    <h1>Warning</h1>
+    This demo app is based on a <b style="color:red;">web-browser</b>!<br />
+    Don't expect usual performance you know from other VIP apps.
 
-<div id="bubble2" onclick="location.href='./content-test.html'"></div>
+    <h1>How to use</h1>
+    <ol>
+        <li>Position yourself, so that you are recognized by the sensor.</li>
+        <li>Raise your hand in front of your body - wait until cursor appears.</li>
+        <li>Then move your hand to move the cursor.</li>
+        <li>Move the cursor onto a content-button and wait until it turns violet and then 3secs to select the button.</li>
+        <li>If the cursor disappears, restart from step 2 to reset the hand-session.</li>
+    </ol>
+    
+    <h1>The tests</h1>
+    <ol>
+        <li><b>Alpha Mask Test:</b> Rendering the alpha mask of a video into transparency in Javascript.</li>
+        <li><b>Content Test Slide:</b> Showing a well-known content-slide on a 16:9 aspect ratio.</li>
+        <li><b>Color Test Video:</b> A promoter filmed in 4K on greenscreen to compare FHD with UHD resolution.</li>
+        <li><b>ePlus Test Slide:</b> Promoter with well-known content bubbles on a 16:9 aspect ratio.</li>
+        <li>---</li>
+        <li><b>This slide:</b> Buttons have same size on both screens (200 * 200px).<br />
+            These seemingly smaller buttons on the right screen come from the higher resolution.<br />
+            My assumption is that smaller UI on UHD is still good enough from a UX pov (if the button is magnetic) - <br />
+            <b>giving more space to the promoter and other content.</b></li>
+    </ol>
+</div>
 
-<div id="bubble3" onclick="location.href='./4k-video-test.html'"></div>
-
-<div id="bubble4" onclick="location.href='./eplus-test.html'"></div>
+<div class="foreground UI" style="z-index: 100;">    
+    <div id="bubble1" onclick="location.href='./alpha-mask-test.html'"></div>
+    <div id="bubble2" onclick="location.href='./content-test.html'"></div>
+    <div id="bubble3" onclick="location.href='./4k-video-test.html'"></div>
+    <div id="bubble4" onclick="location.href='./eplus-test.html'"></div>
+</div>
 
 </body>
 </html>
